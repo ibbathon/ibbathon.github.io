@@ -1,1 +1,64 @@
-Here are some words
+<body style="background-color:black; color:white">
+
+<h1>Hardware</h1>
+You will need a way to mount the phone above your monitor in a stable, reliable position. I went with a <a href="https://www.amazon.com/dp/B07S9JXQP2">gooseneck clamp mount</a> mounted to my wall, but many options exist.
+
+<h1>Software</h1>
+On your phone:
+<ul>
+  <li>
+    <a href="https://play.google.com/store/apps/details?id=com.dev47apps.obsdroidcam">DroidCam OBS</a> (note that this is different from DroidCam; make sure to install the OBS version)
+    <ul>
+      <li>The free version has limited resolution, but is still usable. The pro version is 10$.</li>
+    </ul>
+  </li>
+</ul>
+On your computer:
+<ul>
+  <li><a href="https://obsproject.com/">OBS Studio</a></li>
+  <li><a href="https://www.dev47apps.com/obs/#plugin">DroidCam OBS plugin for OBS Studio</a></li>
+</ul>
+
+<h1>Setup</h1>
+<ol>
+  <li>Start DroidCam OBS on your phone, confirm all the access permissions, and then select which camera you want to use (front-facing if you want a live feed). Make sure to leave DroidCam OBS open.</li>
+  <li>Start OBS Studio on your computer. The first time it boots up, it will ask if you primarily intend to use it for streaming or recording. This answer doesn't matter, so click through and skip.</li>
+  <li>
+    In the Sources dock, click the add button, then DroidCam OBS, and then OK.<br />
+    <img src="add-source.png" /><br />
+    <img src="add-source-list.png" /><br />
+    <img src="add-source-confirm.png" />
+  </li>
+  <li>
+    In the resulting properties dialog, select your desired resolution, then refresh the devices list and select your phone from the list.<br />
+    <img src="source-properties-1.png" /><br />
+    <img src="source-properties-2.png" /><br />
+    <ul>
+      <li>If your phone doesn't appear, make sure DroidCam OBS is open on your phone, then refresh the list in OBS Studio again.</li>
+      <li>If it still doesn't appear, manually enter the WiFi IP displayed on your phone into the properties in OBS Studio.</li>
+    </ul>
+  </li>
+  <li>Check whichever options you want in the properties (I like "Deactivate when not showing as it allows me to disable the webcam by just hiding the source) and then click "Activate". You should now see the video feed from your phone on both your OBS source properties window and your phone's screen. Click OK to close the properties.</li>
+  <li>
+    If you're working with a lower-resolution camera, expand the source (by dragging the red handles) to fill the full preview window in the main OBS view.<br />
+    <img src="source-resize.png" />
+  </li>
+  <li>
+    If you want to crop the view or add other effects, select the source and click "Filters". I use a crop filter and a chroma-key filter.<br />
+    <img src="filters-button.png" /><br />
+    <img src="filters-list.png" />
+  </li>
+  <li>
+    Almost done! Click the "Start Virtual Camera" button on the right. There may be a prompt you have to click through.<br />
+    <img src="virtual-camera-button.png" />
+  </li>
+  <li>
+    Go to Zoom video settings and select the OBS Virtual Camera.<br />
+    <img src="zoom-settings.png" />
+  </li>
+  <li>Enjoy!<ol>
+      <li>To set this up again after reboot, just launch DroidCam OBS on your phone, OBS Studio on your computer, and click Start Virtual Camera.</li>
+  </ol></li>
+</ol>
+
+</body>
